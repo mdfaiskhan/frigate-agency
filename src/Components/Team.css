@@ -1,0 +1,103 @@
+/* Team Carousel Styles */
+.team-carousel {
+  position: relative;
+}
+
+/* Owl Carousel Navigation */
+.team-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Prev/Next Button Styles */
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222429;
+  background: #FFAA17;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Left button positioning */
+.team-carousel .owl-nav .owl-prev {
+  left: -60px;
+}
+
+/* Right button positioning */
+.team-carousel .owl-nav .owl-next {
+  right: -60px;
+}
+
+/* Hover Effects */
+.team-carousel .owl-nav .owl-prev:hover,
+.team-carousel .owl-nav .owl-next:hover {
+  color: #FFAA17;
+  background: #222429;
+}
+
+/* Team Item Overlay */
+.team-item .team-overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border-radius: 4px;
+  background: rgba(34, 36, 41, 0.9);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .team-carousel .owl-nav .owl-prev {
+      left: -40px;
+  }
+
+  .team-carousel .owl-nav .owl-next {
+      right: -40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-carousel .owl-nav .owl-prev {
+      left: -30px;
+  }
+
+  .team-carousel .owl-nav .owl-next {
+      right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-carousel .owl-nav {
+      display: none; /* Hide navigation on smaller screens */
+  }
+
+  .team-item .team-overlay {
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+  }
+}
