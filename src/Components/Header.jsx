@@ -1,4 +1,3 @@
-
 import img from "../Assests/head.png"
 import React from "react";
 
@@ -54,10 +53,7 @@ const Header = () => {
           width: 100%;
           max-width: 300px;
           object-fit: contain;
-          border: 6px solid #212529;
           border-radius: 20px;
-          padding: 10px;
-          background: #fff;
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.8);
           animation: float 3s ease-in-out infinite, zoomIn 0.8s ease;
         }
@@ -101,7 +97,7 @@ const Header = () => {
           text-decoration: none;
           animation: pulse 1.5s infinite;
           width: fit-content;
-          margin: 0 auto; /* Center button */
+          margin: 0 auto;
         }
 
         .header-btn:hover {

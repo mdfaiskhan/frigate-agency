@@ -13,29 +13,25 @@ const testimonials = [
     name: "John Doe",
     profession: "Software Engineer",
     image: img1,
-    feedback:
-      "Tempor lorem dolor sea et ipsum, lorem justo kasd dolore vero eos. Lorem duo ipsum sea amet et clita dolor.",
+    feedback: "Tempor lorem dolor sea et ipsum, lorem justo kasd dolore vero eos.",
   },
   {
     name: "Emily Smith",
     profession: "Entrepreneur",
     image: img2,
-    feedback:
-      "Absolutely loved the service! The team was professional, quick, and exceeded expectations.",
+    feedback: "Absolutely loved the service! The team was professional and quick.",
   },
   {
     name: "Michael Brown",
     profession: "Marketing Manager",
     image: img3,
-    feedback:
-      "The best experience I've had with a company. Would definitely recommend!",
+    feedback: "The best experience I've had with a company. Would definitely recommend!",
   },
   {
     name: "Sophia Williams",
     profession: "UX Designer",
     image: img4,
-    feedback:
-      "From start to finish, the process was smooth and the end result was stunning!",
+    feedback: "The process was smooth and the end result was stunning!",
   },
 ];
 
@@ -49,18 +45,8 @@ const Testimonial = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
 
@@ -73,22 +59,45 @@ const Testimonial = () => {
 
         <Slider {...settings} className="testimonial-carousel">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="testimonial-item position-relative text-center rounded p-4"
-            >
-              <img
-                className="img-fluid rounded mx-auto my-4"
-                src={testimonial.image}
-                alt={testimonial.name}
-              />
+            <div key={index} className="testimonial-item position-relative text-center p-4">
+              <div className="testimonial-image-wrapper mx-auto mb-4">
+                <img className="testimonial-img img-fluid" src={testimonial.image} alt={testimonial.name} />
+              </div>
               <h5 className="text-uppercase">{testimonial.name}</h5>
-              <p className="text-uppercase">{testimonial.profession}</p>
+              <p className="text-muted">{testimonial.profession}</p>
               <p className="text-secondary">{testimonial.feedback}</p>
             </div>
           ))}
         </Slider>
       </div>
+
+      {/* CSS */}
+      <style jsx>{`
+        .testimonial-image-wrapper {
+          width: 150px;
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 4px solid #ffaa17;
+          padding: 5px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          animation: zoomIn 0.8s ease;
+          margin-bottom: 20px;
+        }
+
+        .testimonial-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%; /* Circular */
+        }
+
+        @keyframes zoomIn {
+          from { transform: scale(0.8); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+      `}</style>
     </div>
   );
 };

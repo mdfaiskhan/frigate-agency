@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
-  
+
   // Function to check if the path is active
   const isActive = (path) =>
     location.pathname === path ? "nav-item nav-link active" : "nav-item nav-link";
@@ -82,8 +82,23 @@ const Navbar = () => {
       {/* CSS */}
       <style jsx>{`
         .navbar-container {
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1050;
+          background: white;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
           width: 90%;
-          margin: 0 auto;
+          margin: 0 auto; /* Center the navbar */
+        }
+
+        /* Add padding to body so content doesn't hide behind navbar */
+        body {
+          padding-top: 80px; /* Adjust based on navbar height */
         }
       `}</style>
     </div>
@@ -91,3 +106,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

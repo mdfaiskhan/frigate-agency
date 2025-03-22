@@ -5,37 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from "../Assests/team-1.png";
 import img2 from "../Assests/team-2.png";
 import img3 from "../Assests/team-3.png";
-import img4 from "../Assests/team-4.jpg";
 
 const Team = () => {
   const sliderRef = useRef(null);
 
   const teamMembers = [
-    {
-      name: "MD Absar",
-      role: "CEO & Founder",
-      image: img1,
-      twitter: "https://twitter.com",
-      facebook: "https://facebook.com",
-      linkedin: "https://linkedin.com",
-    },
-    {
-      name: "Shahid Alam",
-      role: "Editor",
-      image: img2,
-      twitter: "https://twitter.com",
-      facebook: "https://facebook.com",
-      linkedin: "https://linkedin.com",
-    },
-    {
-      name: "Aniket",
-      role: "Graphic designer",
-      image: img3,
-      twitter: "https://twitter.com",
-      facebook: "https://facebook.com",
-      linkedin: "https://linkedin.com",
-    },
-    
+    { name: "MD Absar", role: "CEO & Founder", image: img1 },
+    { name: "Shahid Alam", role: "Editor", image: img2 },
+    { name: "Aniket", role: "Graphic designer", image: img3 },
   ];
 
   const settings = {
@@ -47,18 +24,8 @@ const Team = () => {
     autoplay: true,
     autoplaySpeed: 7000,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 600, settings: { slidesToShow: 1 } },
     ],
   };
 
@@ -79,26 +46,11 @@ const Team = () => {
       <Slider ref={sliderRef} {...settings}>
         {teamMembers.map((member, index) => (
           <div key={index} className="p-3">
-            <div className="card border-0 shadow text-center">
-              {/* Updated Image Section */}
-              <div className="team-image">
-                <img src={member.image} alt={member.name} className="img-fluid" />
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">{member.name}</h5>
-                <p className="card-text text-muted">{member.role}</p>
-                <div className="d-flex justify-content-center">
-                  <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="btn btn-primary mx-1">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href={member.facebook} target="_blank" rel="noopener noreferrer" className="btn btn-primary mx-1">
-                    <i className="fab fa-facebook"></i>
-                  </a>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-primary mx-1">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                </div>
-              </div>
+            {/* Team Member Card */}
+            <div className="text-center">
+              <img src={member.image} alt={member.name} className="team-image img-fluid mb-3" />
+              <h5 className="mb-1">{member.name}</h5>
+              <p className="text-muted">{member.role}</p>
             </div>
           </div>
         ))}
@@ -113,24 +65,16 @@ const Team = () => {
         ❯
       </button>
 
-      {/* Image Design CSS */}
+      {/* CSS */}
       <style jsx>{`
         .team-image {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 20px;
-        }
-
-        .img-fluid {
           width: 100%;
           max-width: 200px;
           object-fit: contain;
-          border: 6px solid #212529;
           border-radius: 20px;
-          padding: 10px;
+          padding: 5px;
           background: #fff;
-          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.8);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
           animation: float 3s ease-in-out infinite, zoomIn 0.8s ease;
         }
 
@@ -149,4 +93,5 @@ const Team = () => {
 };
 
 export default Team;
+
 
