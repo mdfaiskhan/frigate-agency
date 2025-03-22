@@ -15,12 +15,14 @@ const ContactSection = () => {
       {/* Contact Container */}
       <div className="row justify-content-center">
         {/* Contact Form */}
-        <div className="col-lg-6 col-md-8 mb-4">
+        <div className="col-lg-6 col-md-8 mb-4 d-flex justify-content-center">
           <div
             className="contact-form rounded p-4"
             style={{
               backgroundColor: '#FFAA17',
               boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+              maxWidth: '500px',
+              width: '100%',
             }}
           >
             <h4 className="mb-4 text-center">Send Us a Message</h4>
@@ -100,11 +102,13 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="col-lg-4 col-md-8">
+        <div className="col-lg-4 col-md-8 d-flex justify-content-center">
           <div
             className="contact-info bg-light p-4 rounded text-center"
             style={{
               boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+              maxWidth: '400px',
+              width: '100%',
             }}
           >
             <h4 className="mb-4">Contact Information</h4>

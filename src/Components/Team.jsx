@@ -47,8 +47,12 @@ const Team = () => {
         {teamMembers.map((member, index) => (
           <div key={index} className="p-3">
             {/* Team Member Card */}
-            <div className="text-center">
-              <img src={member.image} alt={member.name} className="team-image img-fluid mb-3" />
+            <div className="d-flex flex-column align-items-center">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="team-image img-fluid mb-3"
+              />
               <h5 className="mb-1">{member.name}</h5>
               <p className="text-muted">{member.role}</p>
             </div>
@@ -79,13 +83,24 @@ const Team = () => {
         }
 
         @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
         }
 
         @keyframes zoomIn {
-          from { transform: scale(0.8); opacity: 0; }
-          to { transform: scale(1); opacity: 1; }
+          from {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
         }
       `}</style>
     </div>
@@ -93,5 +108,3 @@ const Team = () => {
 };
 
 export default Team;
-
-
