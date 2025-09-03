@@ -4,51 +4,140 @@ import { useNavigate } from "react-router-dom";
 // Service Data
 const serviceCategories = [
   {
-    category: "Content Creation",
+    category: "Social Media Management",
+    services: [
+      {
+        id: "instagram-management",
+        icon: "fa-brands fa-instagram",
+        title: "Instagram Management",
+        description: "Monthly content creation, posting, and audience engagement to grow your Instagram presence.",
+      },
+      {
+        id: "facebook-management",
+        icon: "fa-brands fa-facebook-f",
+        title: "Facebook Management",
+        description: "End-to-end Facebook page handling with regular updates, community engagement, and ad support.",
+      },
+      {
+        id: "social-media-marketing",
+        icon: "fa-bullhorn",
+        title: "Social Media Marketing",
+        description: "Targeted ad campaigns and growth strategies across Instagram and Facebook to boost reach and conversions.",
+      },
+    ],
+  },
+  
+
+  {
+    category: "Photography",
     services: [
       {
         id: "product-photography",
         icon: "fa-camera",
         title: "Product Photography",
-        description: "Capture stunning visuals of your products to make them shine.",
+        description: "Capture and edit stunning visuals of your products to make them shine.",
+        keyFeatures: [
+          "Professional product photoshoot",
+          "High-quality retouching & color correction",
+          "Optimized for web & social media",
+          "Creative styling included",
+        ],
       },
+      {
+        id: "brand-shoots",
+        icon: "fa-users",
+        title: "Brand & Lifestyle Shoots",
+        description: "Bring your brand to life with lifestyle, team, and concept photography.",
+        keyFeatures: [
+          "On-location or studio shoots",
+          "Professional editing & retouching",
+          "Creative direction tailored to brand",
+          "High-resolution delivery",
+        ],
+      },
+      {
+        id: "poster-design",
+        icon: "fa-image",
+        title: "Poster & Banner Design",
+        description: "Design visually appealing static creatives for campaigns and promotions.",
+        keyFeatures: [
+          "Custom creative layouts",
+          "Print & digital-friendly designs",
+          "Brand-consistent visuals",
+          "Editable formats on request",
+        ],
+      },
+    ],
+  },
+  
+  {
+    category: "Videography",
+    services: [
       {
         id: "cinematic-videography",
         icon: "fa-video",
         title: "Cinematic Videography",
         description: "Tell captivating stories through beautifully shot cinematic videos.",
+        keyFeatures: [
+          "4K professional video shoots",
+          "Color grading & editing included",
+          "Creative storytelling approach",
+          "Optimized for social media & ads",
+        ],
       },
       {
         id: "commercial-shoots",
         icon: "fa-bullseye",
-        title: "Commercial Shoots",
-        description: "Professional shoots tailored for marketing and branding success.",
+        title: "Commercial Ad Shoots",
+        description: "Professional ad shoots designed for impactful brand campaigns.",
+        keyFeatures: [
+          "Concept-to-final delivery",
+          "Script & direction included",
+          "Editing & post-production",
+          "High-quality ad-ready formats",
+        ],
+      },
+      {
+        id: "video-editing",
+        icon: "fa-clapperboard",
+        title: "Video Editing",
+        description: "Transform raw footage into polished, engaging videos ready for campaigns.",
+        keyFeatures: [
+          "Cutting, trimming & sequencing",
+          "Sound design & background music",
+          "Transitions & effects",
+          "Export in multiple formats",
+        ],
       },
     ],
   },
+  
+
   {
-    category: "Social Media Management",
+    category: "AI-Powered Solutions",
     services: [
       {
-        id: "instagram-marketing",
-        icon: "fa-brands fa-instagram",
-        title: "Instagram Marketing",
-        description: "Boost engagement and grow your brand with tailored Instagram strategies.",
+        id: "ai-video-creation",
+        icon: "fa-robot",
+        title: "AI Video Creation",
+        description: "Generate engaging, high-quality videos using AI tools tailored to your brand.",
       },
       {
-        id: "facebook-marketing",
-        icon: "fa-brands fa-facebook-f",
-        title: "Facebook Marketing",
-        description: "Create impactful campaigns and connect with your audience on Facebook.",
+        id: "ai-image-generation",
+        icon: "fa-wand-magic-sparkles",
+        title: "AI Image Generation",
+        description: "Create unique, eye-catching visuals and product images with AI technology.",
       },
       {
-        id: "social-media-handling",
-        icon: "fa-share-alt",
-        title: "Social Media Handling",
-        description: "End-to-end management of your social media presence across platforms.",
+        id: "ai-content-assist",
+        icon: "fa-brain",
+        title: "AI Content Assistance",
+        description: "Boost your content strategy with AI-powered copywriting and idea generation.",
       },
     ],
   },
+  
+  
   {
     category: "Digital Marketing",
     services: [

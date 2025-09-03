@@ -2,49 +2,83 @@ import React from "react";
 
 const PricingPlan = () => {
   return (
-    <div className="pricing-container">
-      {/* Header */}
-      <h1 className="display-4 text-uppercase text-center mb-5">Competitive Pricing</h1>
+   <div className="pricing-container">
+  {/* Header */}
+  <h1 className="display-4 text-uppercase text-center mb-5">Competitive Pricing</h1>
 
-      {/* Pricing Plans */}
-      <div className="pricing-inner">
-        <div className="row justify-content-center">
-          {/* Plans */}
-          {[
-            { title: "Starter Plan", price: "₹14,999", features: ["Custom Website Creation", "Basic SEO Setup", "Google My Business Optimization", "Performance Tracking"] },
-            { title: "Growth Plan", price: "₹29,999", features: ["Everything in Starter Plan", "Advanced SEO & Keyword Strategy", "Social Media Management", "Monthly Analytics Report"] },
-            { title: "Premium Plan", price: "₹49,999", features: ["Everything in Growth Plan", "Influencer Marketing", "PPC Ad Campaigns", "24/7 Support & Strategy Sessions"] }
-          ].map((plan, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mb-4">
-              <div className="pricing-card">
-                {/* Plan Title */}
-                <h2 className="plan-title">{plan.title}</h2>
+  {/* Pricing Plans */}
+  <div className="pricing-inner">
+    <div className="row justify-content-center">
+      {/* Plans */}
+      {[
+        {
+          title: "Starter Plan",
+          price: "₹14,999",
+          features: [
+            "Instagram & Facebook Management (8 posts/month)",
+            "Basic Product Photography",
+            "SEO Starter Setup (On-page basics)",
+            "2 Posters/Banners per month",
+            "Monthly Performance Report",
+          ],
+        },
+        {
+          title: "Growth Plan",
+          price: "₹29,999",
+          features: [
+            "Everything in Starter Plan",
+            "Advanced Social Media Strategy (12 posts + reels)",
+            "Cinematic Video Editing (1/month)",
+            "Content Marketing & Blog Writing",
+            "AI-Powered Visuals for Ads",
+            "Advanced SEO + Keyword Strategy",
+            "Monthly Analytics Dashboard",
+          ],
+        },
+        {
+          title: "Premium Plan",
+          price: "₹49,999",
+          features: [
+            "Everything in Growth Plan",
+            "Full Photography & Videography Package",
+            "Commercial Ad Shoots",
+            "AI Video + Image Content",
+            "Website Design & Development",
+            "PPC Ad Campaigns & Influencer Marketing",
+            "24/7 Strategy & Support",
+          ],
+        },
+      ].map((plan, index) => (
+        <div key={index} className="col-lg-4 col-md-6 mb-4">
+          <div className="pricing-card">
+            {/* Plan Title */}
+            <h2 className="plan-title">{plan.title}</h2>
 
-                {/* Price Section */}
-                <div className="price-section">
-                  <p className="starts-from">Starts from</p>
-                  <h1 className="price">
-                    {plan.price}
-                    <span className="price-duration">/ Month</span>
-                  </h1>
-                </div>
-
-                {/* Features List */}
-                <ul className="features-list">
-                  {plan.features.map((feature, i) => (
-                    <li key={i}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
+            {/* Price Section */}
+            <div className="price-section">
+              <p className="starts-from">Starts from</p>
+              <h1 className="price">
+                {plan.price}
+                <span className="price-duration">/ Month</span>
+              </h1>
             </div>
-          ))}
-        </div>
 
-        {/* CTA Button */}
-        <div className="btn-container">
-          <a href="#" className="btn btn-dark order-now-btn">Get Started</a>
+            {/* Features List */}
+            <ul className="features-list">
+              {plan.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+
+    {/* CTA Button */}
+    <div className="btn-container">
+      <a href="#" className="btn btn-dark order-now-btn">Get Started</a>
+    </div>
+  </div>
 
       {/* CSS */}
       <style jsx>{`
